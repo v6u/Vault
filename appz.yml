@@ -24,12 +24,15 @@ volumes:
     mount: /appz/home
     name: home
     size: 5Gi
-  - claim: vault-data
+  - claim: vault-data-pvc
     mount: /appz/data
     name: data
-    size: 5Gi
+    size: 1Gi
+    mode: ReadWriteMany
+    storageClassName: ""
+    volumeName: vault-home-nfs
+    matchLabels: false
 
 properties:
-    revision: 46
+    revision: 47
     ENABLE_AUTO_PASSWORD: True
-    
