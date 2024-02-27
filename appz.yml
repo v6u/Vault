@@ -24,9 +24,9 @@ volumes:
     mount: /appz/home
     name: home
     size: 5Gi
-  - claim: vault-data-pvc
+  - claim: data
     mount: /appz/data
-    name: vault-data-pvc
+    name: data
     size: 1Gi
     mode: ReadWriteMany
     storageClassName: ""
@@ -34,5 +34,5 @@ volumes:
     matchLabels: false
 
 properties:
-    revision: 47
+    revision: 48
     ENABLE_AUTO_PASSWORD: True
