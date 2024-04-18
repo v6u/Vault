@@ -34,5 +34,5 @@ volumes:
     matchLabels: false
 
 properties:
-    revision: 51
+    revision: 52
     ENABLE_AUTO_PASSWORD: True
